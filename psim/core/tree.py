@@ -1026,6 +1026,18 @@ class EditHistory (object):
         newEdit.set("newD",str(newD))
         newEdit.set("newT",str(newT))
         newEdit.set("user",self.user)
+
+    def transition(self,(tr,dtype)):
+        newEdit=ET.SubElement(self.eh,"transition")
+        newEdit.set("time",str(time.time()))
+        newEdit.set("transition",str(tr))
+        newEdit.set("dtype",str(dtype))
+        newEdit.set("user",self.user)
+
+    def undo(self):
+        newEdit=ET.SubElement(self.eh,"undo")
+        newEdit.set("time",str(time.time()))
+        newEdit.set("user",self.user)
         
     def addNullToken(self,atIdx):
         newEdit=ET.SubElement(self.eh,"addNull")

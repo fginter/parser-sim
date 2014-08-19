@@ -42,11 +42,13 @@ class State(object):
         elif t=="SWAP":
             self.stack.insert(-1,self.queue.pop(0))
         self.transition_history.pop(-1)
+        self.tree.eh.undo()
 
     def apply(self,action,dtype=None):
         if action=="SHIFT" and len(self.queue)>0:
             self.stack.append(self.queue.pop(0))
             self.transition_history.append((action,dtype,None,None))
+            self.tree.eh.transition((action,dtype))
             if len(self.queue_rest)>0:
                 self.tree.tokens.append(self.queue_rest[0])
                 self.queue.append(self.queue_rest.pop(0))
@@ -55,15 +57,18 @@ class State(object):
             self.tree.editDepChange([(None,None,None,self.stack[-1].index,self.stack[-2].index,dtype)])
             self.transition_history.append((action,dtype,self.stack[-1].index,self.stack[-2].index))
             self.stack.pop(-2)
+            self.tree.eh.transition((action,dtype))
             self.tree.hasChanged("generic")
         elif action=="RA" and len(self.stack)>=2 and dtype!=None:
             self.tree.editDepChange([(None,None,None,self.stack[-2].index,self.stack[-1].index,dtype)])
             self.transition_history.append((action,dtype,self.stack[-2].index,self.stack[-1].index))
             self.stack.pop(-1)
+            self.tree.eh.transition((action,dtype))
             self.tree.hasChanged("generic")
         elif action=="SWAP" and len(self.stack)>1:
             self.queue.insert(0,self.stack.pop(-2))
             self.transition_history.append((action,dtype,None,None))
+            self.tree.eh.transition((action,dtype))
         else: #Doesn't apply
             return
         
