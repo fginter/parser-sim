@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_main_window.ui'
 #
-# Created: Tue Aug 19 10:02:33 2014
+# Created: Tue Aug 19 11:58:03 2014
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -32,9 +32,19 @@ class Ui_MainWindow(object):
         self.verticalLayout = QtGui.QVBoxLayout(self.centralwidget)
         self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
         self.treeframe = QtGui.QFrame(self.centralwidget)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.treeframe.sizePolicy().hasHeightForWidth())
+        self.treeframe.setSizePolicy(sizePolicy)
         self.treeframe.setFrameShape(QtGui.QFrame.StyledPanel)
         self.treeframe.setFrameShadow(QtGui.QFrame.Raised)
         self.treeframe.setObjectName(_fromUtf8("treeframe"))
+        self.horizontalLayout_2 = QtGui.QHBoxLayout(self.treeframe)
+        self.horizontalLayout_2.setObjectName(_fromUtf8("horizontalLayout_2"))
+        self.label_3 = QtGui.QLabel(self.treeframe)
+        self.label_3.setObjectName(_fromUtf8("label_3"))
+        self.horizontalLayout_2.addWidget(self.label_3)
         self.verticalLayout.addWidget(self.treeframe)
         self.formLayout = QtGui.QFormLayout()
         self.formLayout.setVerticalSpacing(13)
@@ -87,6 +97,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
+        self.label_3.setText(_translate("MainWindow", "TextLabel", None))
         self.label.setText(_translate("MainWindow", "Queue", None))
         self.queue.setText(_translate("MainWindow", "---", None))
         self.label_2.setText(_translate("MainWindow", "Stack", None))
