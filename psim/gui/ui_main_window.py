@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_main_window.ui'
 #
-# Created: Tue Aug 19 14:29:25 2014
+# Created: Tue Aug 19 15:12:40 2014
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -109,16 +109,36 @@ class Ui_MainWindow(object):
         self.SWAP.setObjectName(_fromUtf8("SWAP"))
         self.horizontalLayout.addWidget(self.SWAP)
         self.verticalLayout.addWidget(self.frame)
+        self.frame_3 = QtGui.QFrame(self.centralwidget)
+        self.frame_3.setFrameShape(QtGui.QFrame.StyledPanel)
+        self.frame_3.setFrameShadow(QtGui.QFrame.Raised)
+        self.frame_3.setObjectName(_fromUtf8("frame_3"))
+        self.horizontalLayout_4 = QtGui.QHBoxLayout(self.frame_3)
+        self.horizontalLayout_4.setObjectName(_fromUtf8("horizontalLayout_4"))
+        self.next = QtGui.QPushButton(self.frame_3)
+        self.next.setObjectName(_fromUtf8("next"))
+        self.horizontalLayout_4.addWidget(self.next)
+        self.verticalLayout.addWidget(self.frame_3)
         spacerItem = QtGui.QSpacerItem(20, 40, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Expanding)
         self.verticalLayout.addItem(spacerItem)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 756, 21))
         self.menubar.setObjectName(_fromUtf8("menubar"))
+        self.menuFile = QtGui.QMenu(self.menubar)
+        self.menuFile.setObjectName(_fromUtf8("menuFile"))
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtGui.QStatusBar(MainWindow)
         self.statusbar.setObjectName(_fromUtf8("statusbar"))
         MainWindow.setStatusBar(self.statusbar)
+        self.actionOpen = QtGui.QAction(MainWindow)
+        self.actionOpen.setObjectName(_fromUtf8("actionOpen"))
+        self.actionSave_As = QtGui.QAction(MainWindow)
+        self.actionSave_As.setObjectName(_fromUtf8("actionSave_As"))
+        self.actionSave = QtGui.QAction(MainWindow)
+        self.actionSave.setObjectName(_fromUtf8("actionSave"))
+        self.menuFile.addAction(self.actionOpen)
+        self.menubar.addAction(self.menuFile.menuAction())
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -135,4 +155,9 @@ class Ui_MainWindow(object):
         self.RA.setText(_translate("MainWindow", "RIGHT ARC", None))
         self.SHIFT.setText(_translate("MainWindow", "SHIFT", None))
         self.SWAP.setText(_translate("MainWindow", "SWAP", None))
+        self.next.setText(_translate("MainWindow", "Next sentence", None))
+        self.menuFile.setTitle(_translate("MainWindow", "File", None))
+        self.actionOpen.setText(_translate("MainWindow", "Open...", None))
+        self.actionSave_As.setText(_translate("MainWindow", "Save As...", None))
+        self.actionSave.setText(_translate("MainWindow", "Save", None))
 

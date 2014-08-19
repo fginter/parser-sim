@@ -26,6 +26,10 @@ class State(object):
         self.tree.tokens.extend(self.queue)
         self.transition_history=[]
 
+
+    def done(self):
+        return len(self.queue)==0 and len(self.stack)==1
+
     def undo(self):
         if len(self.transition_history)==0:
             return
@@ -71,7 +75,6 @@ class State(object):
             self.tree.eh.transition((action,dtype))
         else: #Doesn't apply
             return
-        
 
 class Sim(QMainWindow):
     
@@ -84,9 +87,12 @@ class Sim(QMainWindow):
         self.connect(self.gui.SHIFT,SIGNAL('clicked()'),self.SHIFT)
         self.connect(self.gui.SWAP,SIGNAL('clicked()'),self.SWAP)
         self.connect(self.gui.undo,SIGNAL('clicked()'),self.undo)
+        self.connect(self.gui.next,SIGNAL('clicked()'),self.next_sentence)
+        self.gui.actionOpen.triggered.connect(self.open)
 
-        self.test()
-        self.update_view()
+        self.curr_sent_idx=0
+        self.w=DTreeWidget(self.gui.treeframe,readOnly=True)
+        self.gui.treeframe.layout().addWidget(self.w)
 
     def update_view(self):
         self.gui.queue.setText(u" ".join(t.text for t in self.state.queue[:3]))
@@ -100,6 +106,35 @@ class Sim(QMainWindow):
         x=DTypeDialog(self,os.path.join(THIS,"depTypes.txt"),"???")
         x.exec_()
         return x.selected #None if the user cancels
+
+    def save(self):
+        self.tset.save()
+
+    @pyqtSlot()
+    def next_sentence(self):
+        if self.state.done() and self.curr_sent_idx<len(self.tset.sentences)-1:
+            self.curr_sent_idx+=1
+            self.set_sentence()
+
+    def set_sentence(self):
+        t=self.tset.sentences[self.curr_sent_idx]
+        t.deps={}
+        self.state=State(t)
+        self.w.setModel(self.state.tree)
+        self.update_view()
+
+    @pyqtSlot()
+    def open(self):
+        fName=str(QFileDialog.getOpenFileName(self,"Open new .d.xml file","."))
+        if not fName:
+            return
+        self.tset=TreeSetQ.fromFile(fName)
+        self.curr_sent_idx=0
+        self.set_sentence()
+
+    @pyqtSlot()
+    def save(self):
+        print "Save"
 
     @pyqtSlot()
     def undo(self):
@@ -133,15 +168,6 @@ class Sim(QMainWindow):
             return
         self.state.apply("SWAP")
         self.update_view()
-
-    def test(self):
-        tset=TreeSetQ.fromFile("b101-merged.d.xml")
-        t=tset.sentences[2]
-        t.deps={}
-        w=DTreeWidget(self.gui.treeframe,readOnly=True)
-        self.gui.treeframe.layout().addWidget(w)
-        self.state=State(t)
-        w.setModel(self.state.tree)
 
 def main(app):
     main_window=Sim()
