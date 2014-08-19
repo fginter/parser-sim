@@ -183,6 +183,13 @@ class DTreeWidget(QWidget):
             else:
                 self.flagLabel.setText(",".join(displayFlags))
         self.gView.updateGeometry()
+        #Invisible tokens
+        visibleToks=set()
+        for g,d,t in self.model.deps:
+            visibleToks.add(g)
+            visibleToks.add(d)
+        for tIdx,t in enumerate(self.tokenItems):
+            t.setVisible(tIdx in visibleToks)
 
     def populateScene(self):
         """Populate the scene with token/dependency items"""
@@ -208,6 +215,7 @@ class DTreeWidget(QWidget):
         tokenContactXs=[]
         tokenYs=[]
         rightMar=0.0
+
 
         for tIdx,token in enumerate(self.model.tokens):
             txtItem=TokenItem(self.getTokenText(token),tIdx,self,tIdx==0,tIdx==len(self.model.tokens)-1,None,self.gScene)
@@ -640,6 +648,14 @@ class TokenItem(QGraphicsSimpleTextItem):
         self.setFont(self.textFont)
         self.setBrush(self.textBrush)
 
+    def setVisible(self,vis):
+        self.textBrush=QBrush(Qt.SolidPattern)
+        self.textFont=self.scene().font()
+        if vis:
+            self.textBrush.setColor(Qt.black)
+        else:
+            self.textBrush.setColor(Qt.white)
+        self.applyStyle()
 
     def setSelected(self,v):
         self.isSelected=v

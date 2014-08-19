@@ -59,7 +59,7 @@ class Sim(QMainWindow):
         self.update_view()
 
     def update_view(self):
-        self.gui.queue.setText(u" ".join(t.text for t in self.state.queue))
+        self.gui.queue.setText(u" ".join(t.text for t in self.state.queue[:3]))
         self.gui.stack.setText(u" ".join(t.text for t in self.state.stack[-2:]))
 
     def ask_type(self):
