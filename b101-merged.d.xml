@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<treeset name="http://ranneliike.net/blogi.php?nick=Aboa 02.02.2010, 15:41:06" parseconfig="None">
+  <sentence txt="Kävelyreitti III">
+    <token charOff="0-12">
+      <posreading CG="true" baseform="kävely|reitti" rawtags="N Sg Nom Up" tags="N,None,Sg,Nom,None,None,None,None,None,None,None,None,None,None,None,Up,None" />
+    </token>
+    <token charOff="13-16">
+      <posreading CG="true" baseform="III" rawtags="Num Ord Up" tags="Num,Ord,None,None,None,None,None,None,None,None,None,None,None,None,None,Up,None" />
+    </token>
+    <dep dep="1" flags="BASETDT" gov="0" type="num" />
+    <edithistory />
+  </sentence>
+  <sentence txt="Jäällä kävely avaa aina hauskoja ja erikoisia näkökulmia kaupunkiin.">
+    <token charOff="0-6">
+      <posreading CG="true" baseform="jää" rawtags="N Sg Ade Up" tags="N,None,Sg,Ade,None,None,None,None,None,None,None,None,None,None,None,Up,None" />
+    </token>
+    <token charOff="7-13">
+      <posreading CG="true" baseform="kävely" rawtags="N Sg Nom" tags="N,None,Sg,Nom,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="14-18">
+      <posreading CG="true" baseform="avata" rawtags="V Sg3 Act Prs Ind" tags="V,None,None,None,None,Sg3,Act,Prs,Ind,None,None,None,None,None,None,None,None" />
+      <posreading CG="false" baseform="avata" rawtags="V Sg2 Act Imprt" tags="V,None,None,None,None,Sg2,Act,None,Imprt,None,None,None,None,None,None,None,None" />
+      <posreading CG="false" baseform="avata" rawtags="V Prs Ind ConNeg" tags="V,None,None,None,None,None,None,Prs,Ind,ConNeg,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="19-23">
+      <posreading CG="true" baseform="aina" rawtags="Adv" tags="Adv,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="24-32">
+      <posreading CG="true" baseform="hauska" rawtags="A Pl Par Pos" tags="A,None,Pl,Par,None,None,None,None,None,None,None,None,None,None,Pos,None,None" />
+    </token>
+    <token charOff="33-35">
+      <posreading CG="true" baseform="ja" rawtags="C CC" tags="C,CC,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+      <posreading CG="false" baseform="ja" rawtags="C CS" tags="C,CS,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+      <posreading CG="false" baseform="ja" rawtags="Adv" tags="Adv,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="36-45">
+      <posreading CG="true" baseform="erikoinen" rawtags="A Pl Par Pos" tags="A,None,Pl,Par,None,None,None,None,None,None,None,None,None,None,Pos,None,None" />
+      <posreading CG="false" baseform="eri|koisa" rawtags="N Pl Par" tags="N,None,Pl,Par,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="46-56">
+      <posreading CG="true" baseform="näkö|kulma" rawtags="N Pl Par" tags="N,None,Pl,Par,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="57-67">
+      <posreading CG="true" baseform="kaupunki" rawtags="N Sg Ill" tags="N,None,Sg,Ill,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="67-68">
+      <posreading CG="true" baseform="." rawtags="Punct" tags="Punct,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <dep dep="0" flags="BASETDT" gov="1" type="nommod" />
+    <dep dep="1" flags="BASETDT" gov="2" type="nsubj" />
+    <dep dep="3" flags="BASETDT" gov="2" type="advmod" />
+    <dep dep="7" flags="BASETDT" gov="2" type="dobj" />
+    <dep dep="9" flags="BASETDT" gov="2" type="punct" />
+    <dep dep="5" flags="BASETDT" gov="4" type="cc" />
+    <dep dep="6" flags="BASETDT" gov="4" type="conj" />
+    <dep dep="4" flags="BASETDT,CCSC" gov="7" type="amod" />
+    <dep dep="6" flags="CCE" gov="7" type="amod" />
+    <dep dep="8" flags="BASETDT" gov="7" type="nommod" />
+    <edithistory />
+  </sentence>
+  <sentence txt="Vähän samanlainen tunne kuin silloin, kun ystävämme vei meidät kerran ylöstuomiokirkon torniin. ">
+    <token charOff="0-5">
+      <posreading CG="true" baseform="vähän" rawtags="Adv Up" tags="Adv,None,None,None,None,None,None,None,None,None,None,None,None,None,None,Up,None" />
+      <posreading CG="false" baseform="vähä" rawtags="A Sg Gen Pos Up" tags="A,None,Sg,Gen,None,None,None,None,None,None,None,None,None,None,Pos,Up,None" />
+    </token>
+    <token charOff="6-17">
+      <posreading CG="true" baseform="samanlainen" rawtags="A Sg Nom Pos" tags="A,None,Sg,Nom,None,None,None,None,None,None,None,None,None,None,Pos,None,None" />
+    </token>
+    <token charOff="18-23">
+      <posreading CG="true" baseform="tunne" rawtags="N Sg Nom" tags="N,None,Sg,Nom,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+      <posreading CG="false" baseform="tuntea" rawtags="V Sg2 Act Imprt" tags="V,None,None,None,None,Sg2,Act,None,Imprt,None,None,None,None,None,None,None,None" />
+      <posreading CG="false" baseform="tuntea" rawtags="V Prs Ind ConNeg" tags="V,None,None,None,None,None,None,Prs,Ind,ConNeg,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="24-28">
+      <posreading CG="true" baseform="kuin" rawtags="C CS" tags="C,CS,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+      <posreading CG="false" baseform="kuin" rawtags="C CC" tags="C,CC,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+      <posreading CG="false" baseform="kuu" rawtags="N Pl Ins" tags="N,None,Pl,Ins,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="29-36">
+      <posreading CG="true" baseform="silla" rawtags="N Pl Ins" tags="N,None,Pl,Ins,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+      <posreading CG="false" baseform="silloin" rawtags="Adv" tags="Adv,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+      <posreading CG="false" baseform="silta" rawtags="N Pl Ins" tags="N,None,Pl,Ins,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="36-37">
+      <posreading CG="true" baseform="," rawtags="Punct" tags="Punct,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="38-41">
+      <posreading CG="true" baseform="kun" rawtags="C CS" tags="C,CS,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+      <posreading CG="false" baseform="kun" rawtags="C CC" tags="C,CC,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+      <posreading CG="false" baseform="kun" rawtags="Adv" tags="Adv,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="42-51">
+      <posreading CG="true" baseform="ystävä" rawtags="N Sg Nom PxPl1" tags="N,None,Sg,Nom,PxPl1,None,None,None,None,None,None,None,None,None,None,None,None" />
+      <posreading CG="false" baseform="ystävä" rawtags="N Pl Nom PxPl1" tags="N,None,Pl,Nom,PxPl1,None,None,None,None,None,None,None,None,None,None,None,None" />
+      <posreading CG="false" baseform="ystävä" rawtags="N Sg Gen PxPl1" tags="N,None,Sg,Gen,PxPl1,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="52-55">
+      <posreading CG="true" baseform="viedä" rawtags="V Sg3 Act Prt Ind" tags="V,None,None,None,None,Sg3,Act,Prt,Ind,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="56-62">
+      <posreading CG="true" baseform="minä" rawtags="Pron Pers Pl Acc" tags="Pron,Pers,Pl,Acc,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="63-69">
+      <posreading CG="true" baseform="kerta" rawtags="N Sg Gen" tags="N,None,Sg,Gen,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+      <posreading CG="false" baseform="kerran" rawtags="Adv" tags="Adv,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="70-74">
+      <posreading CG="true" baseform="ylös" rawtags="Adv" tags="Adv,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="74-86">
+      <posreading CG="true" baseform="tuomio|kirkko" rawtags="N Sg Gen" tags="N,None,Sg,Gen,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="87-94">
+      <posreading CG="true" baseform="torni" rawtags="N Sg Ill" tags="N,None,Sg,Ill,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="94-95">
+      <posreading CG="true" baseform="." rawtags="Punct" tags="Punct,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <dep dep="0" flags="BASETDT" gov="1" type="advmod" />
+    <dep dep="4" flags="BASETDT" gov="1" type="compar" />
+    <dep dep="1" flags="BASETDT" gov="2" type="amod" />
+    <dep dep="14" flags="BASETDT" gov="2" type="punct" />
+    <dep dep="3" flags="BASETDT" gov="4" type="comparator" />
+    <dep dep="8" flags="BASETDT" gov="4" type="advcl" />
+    <dep dep="5" flags="BASETDT" gov="8" type="punct" />
+    <dep dep="6" flags="BASETDT" gov="8" type="mark" />
+    <dep dep="7" flags="BASETDT" gov="8" type="nsubj" />
+    <dep dep="9" flags="BASETDT" gov="8" type="dobj" />
+    <dep dep="10" flags="BASETDT" gov="8" type="nommod" />
+    <dep dep="13" flags="BASETDT" gov="8" type="nommod" />
+    <dep dep="11" flags="BASETDT" gov="13" type="advmod" />
+    <dep dep="12" flags="BASETDT" gov="13" type="poss" />
+    <edithistory />
+  </sentence>
+  <sentence txt="Kuinka erilaiselta maailma sieltä näyttikään. ">
+    <token charOff="0-6">
+      <posreading CG="true" baseform="kuinka" rawtags="Adv Up" tags="Adv,None,None,None,None,None,None,None,None,None,None,None,None,None,None,Up,None" />
+    </token>
+    <token charOff="7-18">
+      <posreading CG="true" baseform="erilainen" rawtags="A Sg Abl Pos" tags="A,None,Sg,Abl,None,None,None,None,None,None,None,None,None,None,Pos,None,None" />
+      <posreading CG="false" baseform="eri|lainen" rawtags="N Sg Abl" tags="N,None,Sg,Abl,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="19-26">
+      <posreading CG="true" baseform="maa|ilma" rawtags="N Sg Nom" tags="N,None,Sg,Nom,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="27-33">
+      <posreading CG="true" baseform="sieltä" rawtags="Adv" tags="Adv,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+      <posreading CG="false" baseform="se" rawtags="Pron Dem Sg Abl" tags="Pron,Dem,Sg,Abl,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="34-44">
+      <posreading CG="true" baseform="näyttää" rawtags="V Sg3 Act Prt Ind Foc_kaan" tags="V,None,None,None,None,Sg3,Act,Prt,Ind,None,None,None,Foc_kaan,None,None,None,None" />
+    </token>
+    <token charOff="44-45">
+      <posreading CG="true" baseform="." rawtags="Punct" tags="Punct,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <dep dep="0" flags="BASETDT" gov="1" type="advmod" />
+    <dep dep="1" flags="BASETDT" gov="4" type="acomp" />
+    <dep dep="2" flags="BASETDT" gov="4" type="nsubj" />
+    <dep dep="3" flags="BASETDT" gov="4" type="advmod" />
+    <dep dep="5" flags="BASETDT" gov="4" type="punct" />
+    <edithistory />
+  </sentence>
+  <sentence txt="Vaikka tiesi, millainen Turku on kartalla, se hämmästytti siltikin. ">
+    <token charOff="0-6">
+      <posreading CG="true" baseform="vaikka" rawtags="C CS Up" tags="C,CS,None,None,None,None,None,None,None,None,None,None,None,None,None,Up,None" />
+      <posreading CG="false" baseform="vaikka" rawtags="C CC Up" tags="C,CC,None,None,None,None,None,None,None,None,None,None,None,None,None,Up,None" />
+      <posreading CG="false" baseform="vaikka" rawtags="Adv Up" tags="Adv,None,None,None,None,None,None,None,None,None,None,None,None,None,None,Up,None" />
+    </token>
+    <token charOff="7-12">
+      <posreading CG="true" baseform="tietää" rawtags="V Sg3 Act Prt Ind" tags="V,None,None,None,None,Sg3,Act,Prt,Ind,None,None,None,None,None,None,None,None" />
+      <posreading CG="false" baseform="tie" rawtags="N Pl Nom PxSg2" tags="N,None,Pl,Nom,PxSg2,None,None,None,None,None,None,None,None,None,None,None,None" />
+      <posreading CG="false" baseform="tie" rawtags="N Sg Gen PxSg2" tags="N,None,Sg,Gen,PxSg2,None,None,None,None,None,None,None,None,None,None,None,None" />
+      <posreading CG="false" baseform="tie" rawtags="N Sg Nom PxSg2" tags="N,None,Sg,Nom,PxSg2,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="12-13">
+      <posreading CG="true" baseform="," rawtags="Punct" tags="Punct,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="14-23">
+      <posreading CG="true" baseform="millainen" rawtags="Pron Interr Sg Nom" tags="Pron,Interr,Sg,Nom,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="24-29">
+      <posreading CG="true" baseform="Turku" rawtags="N Prop Sg Nom Up" tags="N,Prop,Sg,Nom,None,None,None,None,None,None,None,None,None,None,None,Up,None" />
+      <posreading CG="false" baseform="turku" rawtags="N Sg Nom Up" tags="N,None,Sg,Nom,None,None,None,None,None,None,None,None,None,None,None,Up,None" />
+    </token>
+    <token charOff="30-32">
+      <posreading CG="true" baseform="olla" rawtags="V Sg3 Act Prs Ind" tags="V,None,None,None,None,Sg3,Act,Prs,Ind,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="33-41">
+      <posreading CG="true" baseform="kartta" rawtags="N Sg Ade" tags="N,None,Sg,Ade,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="41-42">
+      <posreading CG="true" baseform="," rawtags="Punct" tags="Punct,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="43-45">
+      <posreading CG="true" baseform="se" rawtags="Pron Dem Sg Nom" tags="Pron,Dem,Sg,Nom,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="46-57">
+      <posreading CG="true" baseform="hämmästyttää" rawtags="V Sg3 Act Prt Ind" tags="V,None,None,None,None,Sg3,Act,Prt,Ind,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="58-66">
+      <posreading CG="true" baseform="silti" rawtags="Adv Foc_kin" tags="Adv,None,None,None,None,None,None,None,None,None,None,None,Foc_kin,None,None,None,None" />
+    </token>
+    <token charOff="66-67">
+      <posreading CG="true" baseform="." rawtags="Punct" tags="Punct,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <dep dep="0" flags="BASETDT" gov="1" type="mark" />
+    <dep dep="3" flags="BASETDT" gov="1" type="ccomp" />
+    <dep dep="2" flags="BASETDT" gov="3" type="punct" />
+    <dep dep="4" flags="BASETDT" gov="3" type="nsubj-cop" />
+    <dep dep="5" flags="BASETDT" gov="3" type="cop" />
+    <dep dep="6" flags="BASETDT" gov="3" type="nommod" />
+    <dep dep="7" flags="BASETDT" gov="3" type="punct" />
+    <dep dep="1" flags="BASETDT" gov="9" type="advcl" />
+    <dep dep="8" flags="BASETDT" gov="9" type="nsubj" />
+    <dep dep="10" flags="BASETDT" gov="9" type="advmod" />
+    <dep dep="11" flags="BASETDT" gov="9" type="punct" />
+    <edithistory />
+  </sentence>
+  <sentence txt="Että Aninkaisten silta on muka tuolla, vai?">
+    <token charOff="0-4">
+      <posreading CG="true" baseform="että" rawtags="C CC Up" tags="C,CC,None,None,None,None,None,None,None,None,None,None,None,None,None,Up,None" />
+      <posreading CG="false" baseform="että" rawtags="C CS Up" tags="C,CS,None,None,None,None,None,None,None,None,None,None,None,None,None,Up,None" />
+    </token>
+    <token charOff="5-16">
+      <posreading CG="true" baseform="Aninkainen" rawtags="N Prop Pl Gen Up UNK" tags="N,Prop,Pl,Gen,None,None,None,None,None,None,None,None,None,None,None,Up,UNK" />
+    </token>
+    <token charOff="17-22">
+      <posreading CG="true" baseform="silta" rawtags="N Sg Nom" tags="N,None,Sg,Nom,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="23-25">
+      <posreading CG="true" baseform="olla" rawtags="V Sg3 Act Prs Ind" tags="V,None,None,None,None,Sg3,Act,Prs,Ind,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="26-30">
+      <posreading CG="true" baseform="muka" rawtags="Adv" tags="Adv,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="31-37">
+      <posreading CG="true" baseform="tuolla" rawtags="Adv" tags="Adv,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+      <posreading CG="false" baseform="tuo" rawtags="Pron Dem Sg Ade" tags="Pron,Dem,Sg,Ade,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="37-38">
+      <posreading CG="true" baseform="," rawtags="Punct" tags="Punct,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="39-42">
+      <posreading CG="true" baseform="vai" rawtags="Adv" tags="Adv,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+      <posreading CG="false" baseform="vai" rawtags="C CC" tags="C,CC,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+      <posreading CG="false" baseform="vai" rawtags="C CS" tags="C,CS,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <token charOff="42-43">
+      <posreading CG="true" baseform="?" rawtags="Punct" tags="Punct,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None" />
+    </token>
+    <dep dep="1" flags="BASETDT" gov="2" type="name" />
+    <dep dep="1" flags="BASETDT" gov="2" type="poss" />
+    <dep dep="0" flags="BASETDT" gov="3" type="advmod" />
+    <dep dep="2" flags="BASETDT" gov="3" type="nsubj" />
+    <dep dep="4" flags="BASETDT" gov="3" type="advmod" />
+    <dep dep="5" flags="BASETDT" gov="3" type="advmod" />
+    <dep dep="6" flags="BASETDT" gov="3" type="punct" />
+    <dep dep="7" flags="BASETDT" gov="3" type="advmod" />
+    <dep dep="8" flags="BASETDT" gov="3" type="punct" />
+    <edithistory />
+  </sentence>
+</treeset>
