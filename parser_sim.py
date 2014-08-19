@@ -92,6 +92,12 @@ class Sim(QMainWindow):
         self.w=DTreeWidget(self.gui.treeframe,readOnly=True)
         self.gui.treeframe.layout().addWidget(self.w)
 
+    def transition_to_text(self,(tr,dtype,gov,dep)):
+        if tr in ("SHIFT","SWAP"):
+            return tr
+        else:
+            return tr+"-"+dtype
+
     def tooltip_text(self,token):
         if token.posTags:
             toolTipTxt=u""
@@ -127,7 +133,7 @@ class Sim(QMainWindow):
             self.gui.stackframe.layout().addWidget(l)
 
         if len(self.state.transition_history)>0:
-            self.gui.previoustransition.setText(u"Prev. transition: "+unicode(self.state.transition_history[-1]))
+            self.gui.previoustransition.setText(u"Prev. transition: "+self.transition_to_text(self.state.transition_history[-1]))
         else:
             self.gui.previoustransition.setText(u"Prev. transition: ---")
 
