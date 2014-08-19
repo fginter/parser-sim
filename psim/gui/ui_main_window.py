@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_main_window.ui'
 #
-# Created: Tue Aug 19 15:12:40 2014
+# Created: Tue Aug 19 16:05:41 2014
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -48,28 +48,25 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addWidget(self.label_3)
         self.verticalLayout.addWidget(self.treeframe)
         self.formLayout = QtGui.QFormLayout()
+        self.formLayout.setFieldGrowthPolicy(QtGui.QFormLayout.ExpandingFieldsGrow)
         self.formLayout.setVerticalSpacing(13)
         self.formLayout.setObjectName(_fromUtf8("formLayout"))
         self.label = QtGui.QLabel(self.centralwidget)
         self.label.setObjectName(_fromUtf8("label"))
         self.formLayout.setWidget(0, QtGui.QFormLayout.LabelRole, self.label)
-        self.queue = QtGui.QLabel(self.centralwidget)
-        font = QtGui.QFont()
-        font.setPointSize(18)
-        self.queue.setFont(font)
-        self.queue.setFrameShape(QtGui.QFrame.Box)
-        self.queue.setObjectName(_fromUtf8("queue"))
-        self.formLayout.setWidget(0, QtGui.QFormLayout.FieldRole, self.queue)
+        self.queueframe = QtGui.QFrame(self.centralwidget)
+        self.queueframe.setFrameShape(QtGui.QFrame.StyledPanel)
+        self.queueframe.setFrameShadow(QtGui.QFrame.Raised)
+        self.queueframe.setObjectName(_fromUtf8("queueframe"))
+        self.formLayout.setWidget(0, QtGui.QFormLayout.FieldRole, self.queueframe)
         self.label_2 = QtGui.QLabel(self.centralwidget)
         self.label_2.setObjectName(_fromUtf8("label_2"))
         self.formLayout.setWidget(1, QtGui.QFormLayout.LabelRole, self.label_2)
-        self.stack = QtGui.QLabel(self.centralwidget)
-        font = QtGui.QFont()
-        font.setPointSize(18)
-        self.stack.setFont(font)
-        self.stack.setFrameShape(QtGui.QFrame.Box)
-        self.stack.setObjectName(_fromUtf8("stack"))
-        self.formLayout.setWidget(1, QtGui.QFormLayout.FieldRole, self.stack)
+        self.stackframe = QtGui.QFrame(self.centralwidget)
+        self.stackframe.setFrameShape(QtGui.QFrame.StyledPanel)
+        self.stackframe.setFrameShadow(QtGui.QFrame.Raised)
+        self.stackframe.setObjectName(_fromUtf8("stackframe"))
+        self.formLayout.setWidget(1, QtGui.QFormLayout.FieldRole, self.stackframe)
         self.verticalLayout.addLayout(self.formLayout)
         self.frame_2 = QtGui.QFrame(self.centralwidget)
         self.frame_2.setFrameShape(QtGui.QFrame.StyledPanel)
@@ -146,9 +143,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
         self.label.setText(_translate("MainWindow", "Queue", None))
-        self.queue.setText(_translate("MainWindow", "---", None))
         self.label_2.setText(_translate("MainWindow", "Stack", None))
-        self.stack.setText(_translate("MainWindow", "---", None))
         self.previoustransition.setText(_translate("MainWindow", "Prev. transition: ---", None))
         self.undo.setText(_translate("MainWindow", "Undo", None))
         self.LA.setText(_translate("MainWindow", "LEFT ARC", None))

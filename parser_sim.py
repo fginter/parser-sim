@@ -84,17 +84,48 @@ class Sim(QMainWindow):
         self.connect(self.gui.undo,SIGNAL('clicked()'),self.undo)
         self.connect(self.gui.next,SIGNAL('clicked()'),self.next_sentence)
         self.gui.actionOpen.triggered.connect(self.open)
+        
+        self.gui.queueframe.setLayout(QHBoxLayout())
+        self.gui.stackframe.setLayout(QHBoxLayout())
 
         self.curr_sent_idx=0
         self.w=DTreeWidget(self.gui.treeframe,readOnly=True)
         self.gui.treeframe.layout().addWidget(self.w)
 
+    def tooltip_text(self,token):
+        if token.posTags:
+            toolTipTxt=u""
+            for cg,base,rawTags,allTags in token.posTags:
+                if cg:
+                    toolTipTxt+=u"*"
+                else:
+                    toolTipTxt+=u" "
+                toolTipTxt+="'"+base+"' "+rawTags+"\n"
+            toolTipTxt=toolTipTxt[:-1]
+            return toolTipTxt
+        else:
+            return u"N/A"
+
+
     def update_view(self):
         if self.state.done():
             print "done, saving"
             self.save()
-        self.gui.queue.setText(u" ".join(t.text for t in self.state.queue[:3]))
-        self.gui.stack.setText(u" ".join(t.text for t in self.state.stack[-2:]))
+
+        for i in range(self.gui.queueframe.layout().count()): 
+            self.gui.queueframe.layout().itemAt(i).widget().close()
+        for t in self.state.queue[:3]:
+            l=QLabel(t.text)
+            l.setToolTip(self.tooltip_text(t))
+            self.gui.queueframe.layout().addWidget(l)
+
+        for i in range(self.gui.stackframe.layout().count()): 
+            self.gui.stackframe.layout().itemAt(i).widget().close()
+        for t in self.state.stack[-2:]:
+            l=QLabel(t.text)
+            l.setToolTip(self.tooltip_text(t))
+            self.gui.stackframe.layout().addWidget(l)
+
         if len(self.state.transition_history)>0:
             self.gui.previoustransition.setText(u"Prev. transition: "+unicode(self.state.transition_history[-1]))
         else:
