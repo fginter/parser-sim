@@ -137,7 +137,6 @@ class Sim(QMainWindow):
             #Found no unfinished sentence, bail out
             QMessageBox.information(self,"Info","All trees in this file have been annotated already")
             return
-        self.curr_sent_idx=0
         self.set_sentence()
 
 
