@@ -7,8 +7,13 @@
     <token charOff="13-16">
       <posreading CG="true" baseform="III" rawtags="Num Ord Up" tags="Num,Ord,None,None,None,None,None,None,None,None,None,None,None,None,None,Up,None" />
     </token>
-    <dep dep="1" flags="BASETDT" gov="0" type="num" />
-    <edithistory />
+    <dep dep="1" gov="0" type="comparator" />
+    <edithistory>
+      <transition dtype="None" time="1408451762.27" transition="SHIFT" user="ginter" />
+      <transition dtype="None" time="1408451762.46" transition="SHIFT" user="ginter" />
+      <depEdit newD="1" newG="0" newT="comparator" oldD="None" oldG="None" oldT="None" time="1408451763.86" user="ginter" />
+      <transition dtype="comparator" time="1408451763.86" transition="RA" user="ginter" />
+    </edithistory>
   </sentence>
   <sentence txt="Jäällä kävely avaa aina hauskoja ja erikoisia näkökulmia kaupunkiin.">
     <token charOff="0-6">

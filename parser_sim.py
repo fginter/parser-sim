@@ -14,18 +14,17 @@ THIS=os.path.dirname(os.path.abspath(__file__))
 class State(object):
 
     def __init__(self,tree):
-        self.tree=TreeQ()
-        self.tree.eh=EditHistory(ET.Element("edithistory"))
-        self.tree.treeset=tree.treeset
-        tokens=tree.tokens[:]
-        for tidx,t in enumerate(tokens):
+        self.tree=tree
+        self.tokens=tree.tokens[:]
+        tree.tokens=[]
+        tree.deps={}
+        tree.eh=EditHistory(ET.Element("edithistory"))
+        for tidx,t in enumerate(self.tokens):
             t.index=tidx
-        self.queue=tokens[:3]
-        self.queue_rest=tokens[3:] #The invisible part of the queue
+        self.queue=self.tokens[:]
         self.stack=[]
         self.tree.tokens.extend(self.queue)
         self.transition_history=[]
-
 
     def done(self):
         return len(self.queue)==0 and len(self.stack)==1
@@ -53,10 +52,6 @@ class State(object):
             self.stack.append(self.queue.pop(0))
             self.transition_history.append((action,dtype,None,None))
             self.tree.eh.transition((action,dtype))
-            if len(self.queue_rest)>0:
-                self.tree.tokens.append(self.queue_rest[0])
-                self.queue.append(self.queue_rest.pop(0))
-                self.tree.hasChanged("generic")
         elif action=="LA" and len(self.stack)>=2 and dtype!=None:
             self.tree.editDepChange([(None,None,None,self.stack[-1].index,self.stack[-2].index,dtype)])
             self.transition_history.append((action,dtype,self.stack[-1].index,self.stack[-2].index))
@@ -95,6 +90,9 @@ class Sim(QMainWindow):
         self.gui.treeframe.layout().addWidget(self.w)
 
     def update_view(self):
+        if self.state.done():
+            print "done, saving"
+            self.save()
         self.gui.queue.setText(u" ".join(t.text for t in self.state.queue[:3]))
         self.gui.stack.setText(u" ".join(t.text for t in self.state.stack[-2:]))
         if len(self.state.transition_history)>0:
@@ -108,6 +106,8 @@ class Sim(QMainWindow):
         return x.selected #None if the user cancels
 
     def save(self):
+        print "saving"
+        print self.tset.fileName
         self.tset.save()
 
     @pyqtSlot()
@@ -118,9 +118,8 @@ class Sim(QMainWindow):
 
     def set_sentence(self):
         t=self.tset.sentences[self.curr_sent_idx]
-        t.deps={}
         self.state=State(t)
-        self.w.setModel(self.state.tree)
+        self.w.setModel(t)
         self.update_view()
 
     @pyqtSlot()
@@ -129,12 +128,18 @@ class Sim(QMainWindow):
         if not fName:
             return
         self.tset=TreeSetQ.fromFile(fName)
+        for idx,s in enumerate(self.tset.sentences):
+            if len(s.tokens)==1 or len(s.deps)>0: #Done sentence, skip
+                continue
+            self.curr_sent_idx=idx
+            break
+        else:
+            #Found no unfinished sentence, bail out
+            QMessageBox.information(self,"Info","All trees in this file have been annotated already")
+            return
         self.curr_sent_idx=0
         self.set_sentence()
 
-    @pyqtSlot()
-    def save(self):
-        print "Save"
 
     @pyqtSlot()
     def undo(self):
