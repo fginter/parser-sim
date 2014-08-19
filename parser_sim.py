@@ -37,7 +37,11 @@ class State(object):
             elif t=="RA":
                 self.stack.append(self.tree.tokens[dep])
             self.tree.hasChanged("generic")
-            self.transition_history.pop(-1)
+        elif t=="SHIFT":
+            self.queue.insert(0,self.stack.pop(-1))
+        elif t=="SWAP":
+            self.stack.insert(-1,self.queue.pop(0))
+        self.transition_history.pop(-1)
 
     def apply(self,action,dtype=None):
         if action=="SHIFT" and len(self.queue)>0:
